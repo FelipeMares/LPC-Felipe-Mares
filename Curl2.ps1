@@ -1,0 +1,1 @@
+﻿curl -s  htps://facebook.com | grep ""\"url\""\cut -d "\" -f4
