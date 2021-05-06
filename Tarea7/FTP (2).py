@@ -55,4 +55,4 @@ def connect_ftp(host:str, port:int = FTP_PORT, usr:str = '', pwd:str = '', save_
 	
 
 if __name__ == '__main__':
-    connect_ftp('187.163.112.11',8080,"FelipeJ","*PASS*",'/Users/LENOVO/ScriptdeSeguridad/LPC/Tarea7/FTP/') 
+    connect_ftp('192.168.56.1',8080,"FelipeJ","*PASS*",'/Users/LENOVO/ScriptdeSeguridad/LPC/Tarea7/FTP/') 
