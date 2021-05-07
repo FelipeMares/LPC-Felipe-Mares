@@ -1,0 +1,21 @@
+#!/bin/bash
+echo "#"
+echo "#"
+read -p "#Para : " Para
+echo "#"
+read -p "#Texto : " Texto
+echo "#"
+read -p "#Asunto : " Asunto
+echo "#"
+echo "Especifica la /ruta/file.txt del adjunto o pulsa Enter"
+echo -n "Ruta del adjunto : "
+read Ruta
+##
+while true; do
+    read -p "Estas seguro de enviar un archivo adjunto? y o n : " yn
+    case $yn in
+        [Yy]* ) echo $Texto | mutt -s $Asunto $Para -a $Ruta; echo "Enviando correo con adjunto"; exit;;
+        [Nn]* ) echo $Texto | mail -s $Asunto $Para; echo "Enviando correo"; exit;;
+        * ) echo "La seleccion y o n, es necesaria";;
+     esac
+done
